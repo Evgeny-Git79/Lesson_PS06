@@ -23,11 +23,11 @@ for lamp in lamps:
     except:
         print("произошла ошибка при парсинге")
         continue
-#    parsed_data.append([title, link])
+    parsed_data.append([title, price, link])
 
 driver.quit()
 
-# with open("lamp.csv", 'w',newline='', encoding='utf-8') as file:
-#    writer = csv.writer(file)
-#    writer.writerow(['Название лампы', 'Цена', 'Ссылка'])
-#    writer.writerows(parsed_data)
+with open("lamp.csv", 'w',newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Название лампы', 'Цена', 'Ссылка'])
+    writer.writerows(parsed_data)
